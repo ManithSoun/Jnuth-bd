@@ -9,7 +9,7 @@
   --paper:#fffdf7;
 }
 *{box-sizing:border-box; margin:0; padding:0}
-html,body{height:100%}
+html,body{height:100%; overflow-x:hidden; width:100%}
 body{
   font-family:'Quicksand', system-ui, sans-serif;
   background:radial-gradient(circle at 20% 20%, #ffe8f2, transparent 50%),
@@ -226,3 +226,75 @@ footer{ text-align:center; padding:40px 20px 70px; color:#a878a0; font-size:.9re
   box-shadow:0 8px 18px rgba(255,111,165,.4);
 }
 .btn:hover{ background:#ff4f92 }
+
+/* ---------- LIGHTBOX ---------- */
+#lightbox{
+  position:fixed; inset:0;
+  background:rgba(90,58,74,.85);
+  display:none;
+  align-items:center; justify-content:center;
+  z-index:1000;
+  padding:20px;
+}
+#lightbox.show{ display:flex; }
+#lightboxInner{
+  background:white;
+  border-radius:16px;
+  padding:16px 16px 20px;
+  max-width:90vw;
+  max-height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+#lightboxImg{
+  max-width:80vw;
+  max-height:70vh;
+  object-fit:contain;
+  border-radius:8px;
+}
+#lightboxActions{ display:flex; gap:12px; }
+#lightboxSave, #lightboxClose{
+  font-family:'Quicksand', sans-serif;
+  font-weight:600;
+  border:none;
+  border-radius:24px;
+  padding:10px 22px;
+  cursor:pointer;
+  text-decoration:none;
+  font-size:.95rem;
+}
+#lightboxSave{ background:var(--pink-dark); color:white; }
+#lightboxSave:hover{ background:#ff4f92; }
+#lightboxClose{ background:#f0e3ec; color:#7a4a63; }
+#lightboxClose:hover{ background:#e6d3e0; }
+
+.frame img{ cursor:zoom-in; }
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px){
+  .envelope{ width:200px; height:135px; }
+  .heart-seal{ font-size:1.6rem; }
+  #tapText{ font-size:.9rem; padding:0 20px; text-align:center; }
+
+  #scene-card{ padding:40px 14px 30px; }
+  .polaroid-main{ width:170px; }
+  .quote-line p{ font-size:1.15rem; }
+
+  .cake{ width:170px; }
+
+  .recent-row{ gap:14px; }
+  .polaroid.featured{ width:130px; }
+  .polaroid.featured .frame{ font-size:1.6rem; }
+
+  .scatter{ gap:14px 10px; }
+  .polaroid{ width:105px; padding:8px 8px 20px; }
+  .polaroid .frame{ font-size:1.2rem; }
+
+  #lightboxInner{ padding:12px 12px 16px; }
+  #lightboxImg{ max-width:88vw; max-height:60vh; }
+  #lightboxActions{ flex-direction:column; width:100%; }
+  #lightboxSave, #lightboxClose{ text-align:center; }
+}
