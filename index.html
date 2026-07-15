@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Surprise For You</title>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,7 +18,7 @@
     <div class="env-flap"></div>
     <div class="heart-seal">💌</div>
   </div>
-  <p id="tapText">tap the envelope, <b>Somanith's sister</b> 🎀</p>
+  <p id="tapText"><b>To Somanuth</b> 🎀 <br>tap the envelope</p>
 </div>
 
 <!-- SCENE 2 -->
@@ -69,7 +70,7 @@
   </div>
 
   <div id="recent">
-    <h2 className="pb-2">Recently</h2>
+    <h2>Recently</h2>
     <div class="recent-row">
       <div class="polaroid featured"><div class="frame"><img src="assets/photo1.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
       <div class="polaroid featured"><div class="frame"><img src="assets/photo3.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
@@ -87,10 +88,21 @@
   </div>
 
   <footer>
-    made with 💗 by Somanith
+    made with 💗 by the cooleste sister
     <br>
     <button class="btn" onclick="burst()">more confetti!</button>
   </footer>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div id="lightboxInner">
+    <img id="lightboxImg" src="" alt="">
+    <div id="lightboxActions">
+      <a id="lightboxSave" href="" download>Save photo</a>
+      <button id="lightboxClose">Close</button>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
