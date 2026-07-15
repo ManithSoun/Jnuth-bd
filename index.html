@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Surprise For You</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="confetti"></canvas>
+
+<!-- SCENE 1 -->
+<div id="scene-envelope">
+  <div class="envelope" id="envelope">
+    <div class="env-shadow-fold"></div>
+    <div class="env-body"></div>
+    <div class="env-flap"></div>
+    <div class="heart-seal">💌</div>
+  </div>
+  <p id="tapText">tap the envelope, <b>Somanith's sister</b> 🎀</p>
+</div>
+
+<!-- SCENE 2 -->
+<div id="scene-card">
+  <header>
+    <h1>Happy Birthday! 💕</h1>
+  </header>
+
+  <div class="polaroid-main">
+    <div class="frame" id="mainPhoto"><img src="assets/main.jpg" alt="her" onerror="this.parentElement.textContent='📷'"></div>
+    <div class="caption">her, being iconic ✨</div>
+  </div>
+
+  <div class="quote-line">
+    <p>another year, same iconic sister energy</p>
+    <span>— Somanith</span>
+  </div>
+
+  <div id="cakeSection">
+    <h3>Make a wish</h3>
+    <p class="hint">click each candle to blow it out</p>
+    <div class="cake-wrap">
+      <svg class="cake" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="110" cy="180" rx="95" ry="14" fill="#f3d6e3"/>
+        <rect x="25" y="120" width="170" height="55" rx="10" fill="#ff9ecb"/>
+        <rect x="25" y="120" width="170" height="14" fill="#ff6fa5"/>
+        <rect x="40" y="85" width="140" height="45" rx="10" fill="#ffd6e8"/>
+        <rect x="40" y="85" width="140" height="12" fill="#ffb8d6"/>
+        <circle cx="60" cy="118" r="4" fill="#c9a0ff"/>
+        <circle cx="90" cy="150" r="4" fill="#ffe066"/>
+        <circle cx="130" cy="118" r="4" fill="#8fe3c0"/>
+        <circle cx="160" cy="150" r="4" fill="#ff6fa5"/>
+        <circle cx="110" cy="150" r="4" fill="#c9a0ff"/>
+        <g class="candle" data-idx="0">
+          <rect x="65" y="55" width="8" height="30" fill="#ffe066"/>
+          <ellipse class="flame" cx="69" cy="50" rx="5" ry="9" fill="#ff9d3d"/>
+        </g>
+        <g class="candle" data-idx="1">
+          <rect x="106" y="50" width="8" height="35" fill="#8fe3c0"/>
+          <ellipse class="flame" cx="110" cy="45" rx="5" ry="9" fill="#ff9d3d"/>
+        </g>
+        <g class="candle" data-idx="2">
+          <rect x="147" y="55" width="8" height="30" fill="#c9a0ff"/>
+          <ellipse class="flame" cx="151" cy="50" rx="5" ry="9" fill="#ff9d3d"/>
+        </g>
+      </svg>
+    </div>
+    <div id="cakeMsg"></div>
+  </div>
+
+  <div id="recent">
+    <h2 className="pb-2">Recently</h2>
+    <div class="recent-row">
+      <div class="polaroid featured"><div class="frame"><img src="assets/photo1.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+      <div class="polaroid featured"><div class="frame"><img src="assets/photo3.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+    </div>
+  </div>
+
+  <div id="gallery">
+    <h2>Memories</h2>
+    <div class="scatter" id="photoGrid">
+      <div class="polaroid"><div class="frame"><img src="assets/photo2.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+      <div class="polaroid"><div class="frame"><img src="assets/photo4.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+      <div class="polaroid"><div class="frame"><img src="assets/photo5.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+      <div class="polaroid"><div class="frame"><img src="assets/photo6.jpg" alt="" onerror="this.parentElement.textContent='📷'"></div></div>
+    </div>
+  </div>
+
+  <footer>
+    made with 💗 by Somanith
+    <br>
+    <button class="btn" onclick="burst()">more confetti!</button>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
