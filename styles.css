@@ -274,7 +274,7 @@ footer{ text-align:center; padding:40px 20px 70px; color:#a878a0; font-size:.9re
 .frame img{ cursor:zoom-in; }
 
 /* ---------- MOBILE ---------- */
-@media (max-width: 480px){
+@media (max-width: 600px){
   .envelope{ width:200px; height:135px; }
   .heart-seal{ font-size:1.6rem; }
   #tapText{ font-size:.9rem; padding:0 20px; text-align:center; }
@@ -285,13 +285,13 @@ footer{ text-align:center; padding:40px 20px 70px; color:#a878a0; font-size:.9re
 
   .cake{ width:170px; }
 
-  .recent-row{ gap:14px; }
-  .polaroid.featured{ width:130px; }
-  .polaroid.featured .frame{ font-size:1.6rem; }
+  .recent-row{ flex-direction:column; align-items:center; gap:20px; }
+  .polaroid.featured{ width:min(85vw, 280px); }
+  .polaroid.featured .frame{ font-size:2.4rem; }
 
-  .scatter{ gap:14px 10px; }
-  .polaroid{ width:105px; padding:8px 8px 20px; }
-  .polaroid .frame{ font-size:1.2rem; }
+  .scatter{ flex-direction:column; align-items:center; gap:20px; }
+  .polaroid{ width:min(85vw, 280px); padding:12px 12px 30px; transform:none !important; }
+  .polaroid .frame{ font-size:2rem; }
 
   #lightboxInner{ padding:12px 12px 16px; }
   #lightboxImg{ max-width:88vw; max-height:60vh; }
