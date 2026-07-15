@@ -71,3 +71,28 @@ candles.forEach(c=>{
     }
   });
 });
+
+/* ---------- LIGHTBOX (click photo to view + save) ---------- */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxSave = document.getElementById("lightboxSave");
+const lightboxClose = document.getElementById("lightboxClose");
+
+document.querySelectorAll(".frame img").forEach(img=>{
+  img.addEventListener("click", ()=>{
+    lightboxImg.src = img.src;
+    lightboxSave.href = img.src;
+    // suggest a filename based on the source image
+    const name = img.src.split("/").pop() || "photo.jpg";
+    lightboxSave.setAttribute("download", name);
+    lightbox.classList.add("show");
+  });
+});
+
+lightboxClose.addEventListener("click", ()=> lightbox.classList.remove("show"));
+lightbox.addEventListener("click", (e)=>{
+  if(e.target === lightbox) lightbox.classList.remove("show");
+});
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape") lightbox.classList.remove("show");
+});
